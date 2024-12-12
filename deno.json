@@ -1,0 +1,9 @@
+{
+	"tasks": {
+		"dev": "deno run --watch -A --no-clear-screen main.ts",
+		"format": "deno fmt --indent-width 4 --line-width 80 --use-tabs=true"
+	},
+	"imports": {
+		"@std/assert": "jsr:@std/assert@1"
+	}
+}
