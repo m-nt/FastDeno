@@ -1,4 +1,5 @@
-import { FastDeno, FastRequest } from "./src/server.ts";
+import { FastDeno } from "./src/server.ts";
+import { FastRequest } from "./src/request.ts";
 
 const server = new FastDeno();
 
@@ -12,7 +13,8 @@ server.add_route("GET", "/mamad", (req, res, next) => {
 	res.status = 300;
 	next();
 }, (req, res) => {
-	// console.log("ROUTE");
+	console.log(req.body);
+	
 	res?.headers.set("MAMAD", "NABODI");
 	res.send(200, { message: "mamad" });
 });
